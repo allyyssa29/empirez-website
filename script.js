@@ -25,7 +25,7 @@ const tipData = {
       <h4>Server Info</h4>
 
       <p>
-        <b>EmpireZ : Star Wars : PvE with PvP Zones</b><br>
+        <b>EmpireZ : Star Wars : PVE</b><br>
         IP Address: 64.20.63.70:2502
       </p>
 
@@ -55,9 +55,7 @@ const tipData = {
       <ul>
         <li>Use a wrench to flip your speeder.</li>
         <li>Auto-Run feature available.</li>
-        <li>Main trader has limited items for purchase.</li>
         <li>No PvP in the PVE area — DMG OFF.</li>
-        <li>Red circles on the map are PvP zones.</li>
         <li>No building in military areas or POIs.</li>
         <li>A buried stash lasts 14 days.</li>
         <li>Press M in game and use the info tab for more details.</li>
@@ -95,25 +93,16 @@ const tipData = {
   traders: {
     title: "Traders",
     html: `
-      <h4>Buy</h4>
+      <h4>Full Trader</h4>
 
       <ul>
-        <li>Limited building supplies</li>
-        <li>BBP wallpapers & decor</li>
-        <li>Vehicles</li>
-      </ul>
-
-      <h4>Sell</h4>
-
-      <ul>
-        <li>Weapons</li>
-        <li>Artifacts</li>
+        <li>Both EmpireZ servers feature a fully stocked trader.</li>
+        <li>Buy and sell gear, weapons, building supplies, vehicles, and other survival essentials.</li>
       </ul>
 
       <h4>Important Notes</h4>
 
       <ul>
-        <li>A map marker is available for “Limited Trader”.</li>
         <li>Do not leave ships at trader when logging off.</li>
         <li>Use one of the 3 garages at trader for proper ship storage.</li>
       </ul>
@@ -308,7 +297,7 @@ const tipData = {
         src="artifact-crafting.svg"
         alt="EmpireZ Artifact Crafting Guide"
         class="artifact-guide"
-    >
+      >
     `
   },
 
@@ -445,7 +434,8 @@ if (tipPanel) {
   });
 
 
-  const tipClose = document.querySelector("#tip-panel .tip-close");
+  const tipClose =
+    document.querySelector("#tip-panel .tip-close");
 
   if (tipClose) {
 
@@ -514,7 +504,9 @@ const outpostData = {
       <h4>Admin Shop Price List</h4>
 
       <p>
-        <i>All prices are listed in Trade Federation Coins (TF Coins).</i>
+        <i>
+          All prices are listed in Trade Federation Coins (TF Coins).
+        </i>
       </p>
 
       <h4>Ships</h4>
@@ -637,7 +629,8 @@ const outpostData = {
 // HC OUTPOST CLICKABLE CARDS
 // =====================================================
 
-const outpostPanel = document.getElementById("outpost-panel");
+const outpostPanel =
+  document.getElementById("outpost-panel");
 
 if (outpostPanel) {
 
@@ -655,8 +648,11 @@ if (outpostPanel) {
 
       btn.classList.add("active");
 
-      document.getElementById("outpost-title").textContent = d.title;
-      document.getElementById("outpost-content").innerHTML = d.html;
+      document.getElementById("outpost-title").textContent =
+        d.title;
+
+      document.getElementById("outpost-content").innerHTML =
+        d.html;
 
       outpostPanel.hidden = false;
 
@@ -713,19 +709,23 @@ if (mediaLightbox && mediaLightboxImage) {
 
     item.addEventListener("click", () => {
 
-      mediaLightboxImage.src = item.dataset.full;
+      mediaLightboxImage.src =
+        item.dataset.full;
 
       mediaLightboxImage.alt =
         item.dataset.title || "EmpireZ media";
 
       if (mediaLightboxTitle) {
+
         mediaLightboxTitle.textContent =
           item.dataset.title || "";
+
       }
 
       mediaLightbox.hidden = false;
 
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow =
+        "hidden";
 
     });
 
@@ -756,7 +756,9 @@ if (mediaLightbox && mediaLightboxImage) {
   mediaLightbox.addEventListener("click", e => {
 
     if (e.target === mediaLightbox) {
+
       closeMediaLightbox();
+
     }
 
   });
@@ -768,9 +770,241 @@ if (mediaLightbox && mediaLightboxImage) {
       e.key === "Escape" &&
       !mediaLightbox.hidden
     ) {
+
       closeMediaLightbox();
+
     }
 
   });
+
+}
+
+
+// =====================================================
+// GEAR GUIDE
+// =====================================================
+
+const gearData = {
+
+  tier1: {
+    title: "Tier 1",
+    html: `
+      <p class="tip-note">
+        Gear information coming soon.
+      </p>
+    `
+  },
+
+
+  tier2: {
+    title: "Tier 2",
+    html: `
+      <p class="tip-note">
+        Gear information coming soon.
+      </p>
+    `
+  },
+
+
+  tier3: {
+    title: "Tier 3",
+    html: `
+      <p class="tip-note">
+        Gear information coming soon.
+      </p>
+    `
+  },
+
+
+  achievement: {
+    title: "Achievement Armor",
+    html: `
+      <p class="tip-note">
+        Achievement armor information coming soon.
+      </p>
+    `
+  },
+
+
+  nbc: {
+    title: "NBC Gear",
+    html: `
+      <p class="tip-note">
+        NBC gear information coming soon.
+      </p>
+    `
+  }
+
+};
+
+
+// =====================================================
+// GEAR GUIDE CLICKABLE CARDS
+// =====================================================
+
+const gearPanel =
+  document.getElementById("gear-panel");
+
+if (gearPanel) {
+
+  document.querySelectorAll("#gear .gear-card").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      const d =
+        gearData[btn.dataset.gear];
+
+      if (!d) return;
+
+      document.querySelectorAll("#gear .gear-card").forEach(b =>
+        b.classList.remove("active")
+      );
+
+      btn.classList.add("active");
+
+      document.getElementById("gear-title").textContent =
+        d.title;
+
+      document.getElementById("gear-content").innerHTML =
+        d.html;
+
+      gearPanel.hidden = false;
+
+      gearPanel.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+
+    });
+
+  });
+
+
+  const gearClose =
+    document.querySelector("#gear-panel .gear-close");
+
+  if (gearClose) {
+
+    gearClose.addEventListener("click", () => {
+
+      gearPanel.hidden = true;
+
+      document.querySelectorAll("#gear .gear-card").forEach(b =>
+        b.classList.remove("active")
+      );
+
+    });
+
+  }
+
+}
+
+
+// =====================================================
+// COLLECTIBLES
+// =====================================================
+
+const collectibleData = {
+
+  legos: {
+    title: "Legos",
+    html: `
+      <p class="tip-note">
+        Lego collectible information coming soon.
+      </p>
+    `
+  },
+
+
+  cards: {
+    title: "Trading Cards",
+    html: `
+      <p class="tip-note">
+        Trading card information coming soon.
+      </p>
+    `
+  },
+
+
+  sabers: {
+    title: "Sabers",
+    html: `
+      <p class="tip-note">
+        Saber information coming soon.
+      </p>
+    `
+  }
+
+};
+
+
+// =====================================================
+// COLLECTIBLES CLICKABLE CARDS
+// =====================================================
+
+const collectiblesPanel =
+  document.getElementById("collectibles-panel");
+
+if (collectiblesPanel) {
+
+  document
+    .querySelectorAll("#collectibles .collectible-card")
+    .forEach(btn => {
+
+      btn.addEventListener("click", () => {
+
+        const d =
+          collectibleData[btn.dataset.collectible];
+
+        if (!d) return;
+
+        document
+          .querySelectorAll("#collectibles .collectible-card")
+          .forEach(b =>
+            b.classList.remove("active")
+          );
+
+        btn.classList.add("active");
+
+        document.getElementById(
+          "collectibles-title"
+        ).textContent = d.title;
+
+        document.getElementById(
+          "collectibles-content"
+        ).innerHTML = d.html;
+
+        collectiblesPanel.hidden = false;
+
+        collectiblesPanel.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest"
+        });
+
+      });
+
+    });
+
+
+  const collectiblesClose =
+    document.querySelector(
+      "#collectibles-panel .collectibles-close"
+    );
+
+  if (collectiblesClose) {
+
+    collectiblesClose.addEventListener("click", () => {
+
+      collectiblesPanel.hidden = true;
+
+      document
+        .querySelectorAll("#collectibles .collectible-card")
+        .forEach(b =>
+          b.classList.remove("active")
+        );
+
+    });
+
+  }
 
 }

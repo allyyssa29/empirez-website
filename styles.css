@@ -1153,3 +1153,8 @@ footer strong {
     grid-template-columns: 1fr;
   }
 }
+/* Center hero background circle around EmpireZ logo */
+.hero::before {
+  top: 43% !important;
+  transform: translate(-50%, -50%) !important;
+}

@@ -1174,3 +1174,35 @@ footer strong {
   height: auto;
   object-fit: contain;
 }
+/* =========================================
+   GEAR GUIDE - CLEAN IMAGE LAYOUT
+   ========================================= */
+
+.gear-image-list {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.gear-image-list img {
+  display: block;
+  width: auto;
+  max-width: 850px;
+  max-height: 650px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #5a1419;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(224, 25, 36, 0.15);
+}
+
+/* Smaller screens */
+@media (max-width: 900px) {
+  .gear-image-list img {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+  }
+}

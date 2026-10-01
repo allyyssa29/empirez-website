@@ -125,6 +125,7 @@ const tipData = {
     title: "World Events",
     html: `
       <ul>
+
         <li>
           <b>Jawa Crate — Tier 4:</b>
           Notification plays and a map marker appears.
@@ -154,6 +155,7 @@ const tipData = {
           <b>Loot Droids (Color):</b>
           Any military tier.
         </li>
+
       </ul>
     `
   },
@@ -368,6 +370,7 @@ const tipData = {
     title: "Quests",
     html: `
       <ul>
+
         <li>Imperial Keycard → Opens Imperial Bunker</li>
 
         <li>
@@ -397,6 +400,7 @@ const tipData = {
           Green Kyber + Green Kyber →
           Nihilus Holocron → Mustafar Temple
         </li>
+
       </ul>
     `
   }
@@ -412,7 +416,7 @@ const tipPanel = document.getElementById("tip-panel");
 
 if (tipPanel) {
 
-  document.querySelectorAll(".tip-card").forEach(btn => {
+  document.querySelectorAll("#tips .tip-card").forEach(btn => {
 
     btn.addEventListener("click", () => {
 
@@ -420,7 +424,7 @@ if (tipPanel) {
 
       if (!d) return;
 
-      document.querySelectorAll(".tip-card").forEach(b =>
+      document.querySelectorAll("#tips .tip-card").forEach(b =>
         b.classList.remove("active")
       );
 
@@ -441,7 +445,7 @@ if (tipPanel) {
   });
 
 
-  const tipClose = document.querySelector(".tip-close");
+  const tipClose = document.querySelector("#tip-panel .tip-close");
 
   if (tipClose) {
 
@@ -449,7 +453,7 @@ if (tipPanel) {
 
       tipPanel.hidden = true;
 
-      document.querySelectorAll(".tip-card").forEach(b =>
+      document.querySelectorAll("#tips .tip-card").forEach(b =>
         b.classList.remove("active")
       );
 
@@ -502,19 +506,16 @@ const outpostData = {
         Have a suggestion for a new item? Let us know!
       </p>
 
-
       <p class="tip-note">
         ⚠️ Griefing or dismantling the shop = IMMEDIATE BAN<br>
         ⚠️ All items are non-refundable.
       </p>
-
 
       <h4>Admin Shop Price List</h4>
 
       <p>
         <i>All prices are listed in Trade Federation Coins (TF Coins).</i>
       </p>
-
 
       <h4>Ships</h4>
 
@@ -523,7 +524,6 @@ const outpostData = {
           <b>All Static Ships</b> — 800 TF Coins
         </li>
       </ul>
-
 
       <h4>Posters & Custom Items</h4>
 
@@ -556,7 +556,6 @@ const outpostData = {
         </li>
 
       </ul>
-
 
       <h4>Decorations & Statics</h4>
 
@@ -642,7 +641,7 @@ const outpostPanel = document.getElementById("outpost-panel");
 
 if (outpostPanel) {
 
-  document.querySelectorAll(".outpost-card").forEach(btn => {
+  document.querySelectorAll("#outpost .outpost-card").forEach(btn => {
 
     btn.addEventListener("click", () => {
 
@@ -650,7 +649,7 @@ if (outpostPanel) {
 
       if (!d) return;
 
-      document.querySelectorAll(".outpost-card").forEach(b =>
+      document.querySelectorAll("#outpost .outpost-card").forEach(b =>
         b.classList.remove("active")
       );
 
@@ -671,7 +670,8 @@ if (outpostPanel) {
   });
 
 
-  const outpostClose = document.querySelector(".outpost-close");
+  const outpostClose =
+    document.querySelector("#outpost-panel .outpost-close");
 
   if (outpostClose) {
 
@@ -679,12 +679,98 @@ if (outpostPanel) {
 
       outpostPanel.hidden = true;
 
-      document.querySelectorAll(".outpost-card").forEach(b =>
+      document.querySelectorAll("#outpost .outpost-card").forEach(b =>
         b.classList.remove("active")
       );
 
     });
 
   }
+
+}
+
+
+// =====================================================
+// MEDIA GALLERY LIGHTBOX
+// =====================================================
+
+const mediaLightbox =
+  document.getElementById("media-lightbox");
+
+const mediaLightboxImage =
+  document.getElementById("media-lightbox-image");
+
+const mediaLightboxTitle =
+  document.getElementById("media-lightbox-title");
+
+const mediaLightboxClose =
+  document.querySelector(".media-lightbox-close");
+
+
+if (mediaLightbox && mediaLightboxImage) {
+
+  document.querySelectorAll(".media-item").forEach(item => {
+
+    item.addEventListener("click", () => {
+
+      mediaLightboxImage.src = item.dataset.full;
+
+      mediaLightboxImage.alt =
+        item.dataset.title || "EmpireZ media";
+
+      if (mediaLightboxTitle) {
+        mediaLightboxTitle.textContent =
+          item.dataset.title || "";
+      }
+
+      mediaLightbox.hidden = false;
+
+      document.body.style.overflow = "hidden";
+
+    });
+
+  });
+
+
+  const closeMediaLightbox = () => {
+
+    mediaLightbox.hidden = true;
+
+    mediaLightboxImage.src = "";
+
+    document.body.style.overflow = "";
+
+  };
+
+
+  if (mediaLightboxClose) {
+
+    mediaLightboxClose.addEventListener(
+      "click",
+      closeMediaLightbox
+    );
+
+  }
+
+
+  mediaLightbox.addEventListener("click", e => {
+
+    if (e.target === mediaLightbox) {
+      closeMediaLightbox();
+    }
+
+  });
+
+
+  document.addEventListener("keydown", e => {
+
+    if (
+      e.key === "Escape" &&
+      !mediaLightbox.hidden
+    ) {
+      closeMediaLightbox();
+    }
+
+  });
 
 }

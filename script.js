@@ -793,51 +793,63 @@ if (mediaLightbox && mediaLightboxImage) {
 const gearData = {
 
   tier1: {
-    title: "Tier 1",
+    title: "",
     html: `
-      <p class="tip-note">
-        Gear information coming soon.
-      </p>
+      <div class="gear-image-list">
+        <img src="tier1armor.jpg" alt="Tier 1 Armor">
+        <img src="tier1armortwo.jpg" alt="Tier 1 Armor">
+        <img src="tier1armorthree.jpg" alt="Tier 1 Armor">
+      </div>
     `
   },
-
 
   tier2: {
-    title: "Tier 2",
+    title: "",
     html: `
-      <p class="tip-note">
-        Gear information coming soon.
-      </p>
+      <div class="gear-image-list">
+        <img src="tier2armor.jpg" alt="Tier 2 Armor">
+        <img src="tier2armortwo.jpg" alt="Tier 2 Armor">
+        <img src="tier2armorthree.jpg" alt="Tier 2 Armor">
+        <img src="tier2armorfour.jpg" alt="Tier 2 Armor">
+        <img src="tier2armorfive.jpg" alt="Tier 2 Armor">
+        <img src="tier2armorsix.jpg" alt="Tier 2 Armor">
+        <img src="tier2armorseven.jpg" alt="Tier 2 Armor">
+        <img src="tier2armoreight.jpg" alt="Tier 2 Armor">
+        <img src="tier2armornine.jpg" alt="Tier 2 Armor">
+        <img src="tier2armorten.jpg" alt="Tier 2 Armor">
+        <img src="tier2armoreleven.jpg" alt="Tier 2 Armor">
+        <img src="tier2armortwelve.jpg" alt="Tier 2 Armor">
+        <img src="tier2armorthirteen.jpg" alt="Tier 2 Armor">
+      </div>
     `
   },
-
 
   tier3: {
-    title: "Tier 3",
+    title: "",
     html: `
-      <p class="tip-note">
-        Gear information coming soon.
-      </p>
+      <div class="gear-image-list">
+        <img src="tier3armor.jpg" alt="Tier 3 Armor">
+        <img src="tier3armor2.jpg" alt="Tier 3 Armor">
+        <img src="tier3armor3.jpg" alt="Tier 3 Armor">
+      </div>
     `
   },
-
 
   achievement: {
-    title: "Achievement Armor",
+    title: "",
     html: `
-      <p class="tip-note">
-        Achievement armor information coming soon.
-      </p>
+      <div class="gear-image-list">
+        <img src="achievementarmor.jpeg" alt="Achievement Armor">
+      </div>
     `
   },
 
-
   nbc: {
-    title: "NBC Gear",
+    title: "",
     html: `
-      <p class="tip-note">
-        NBC gear information coming soon.
-      </p>
+      <div class="gear-image-list">
+        <img src="nbcgear.jpg" alt="NBC Gear">
+      </div>
     `
   }
 

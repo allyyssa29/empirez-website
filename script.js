@@ -232,20 +232,26 @@ const tipData = {
       <p>
         All custom storage containers hold <b>1,000 slots</b>.
         Exception: Wood Crate uses vanilla storage.
-      </p>
+    </p>
 
-      <h4>Crafting Recipes</h4>
+    <h4>Crafting Recipes</h4>
 
-      <ul>
-        <li>Han Storage — Han Carbonite + Hammer</li>
-        <li>Wood Crate — Planks + Nails</li>
-        <li>Locker — 10× Sheet Metal + 70× Nails</li>
-        <li>Gun Wall — 6× Sheet Metal + 70× Nails</li>
-        <li>Gear Stand — 1× Log + 70× Nails</li>
-        <li>All Other Storage — 2× Sheet Metal + Box of Nails</li>
-      </ul>
-    `
-  },
+    <ul>
+      <li>Han Storage — Han Carbonite + Hammer</li>
+      <li>Wood Crate — Planks + Nails</li>
+      <li>Locker — 10× Sheet Metal + 70× Nails</li>
+      <li>Gun Wall — 6× Sheet Metal + 70× Nails</li>
+      <li>Gear Stand — 1× Log + 70× Nails</li>
+      <li>All Other Storage — 2× Sheet Metal + Box of Nails</li>
+    </ul>
+
+    <img
+      src="storagecrafting.jpg"
+      alt="EmpireZ Storage Crafting Guide"
+      class="artifact-guide"
+    >
+  `
+},
 
 
   artifact: {

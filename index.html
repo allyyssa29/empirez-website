@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>EmpireZ : Star Wars | DayZ</title>
   <meta name="description" content="EmpireZ Star Wars DayZ community hub">
-  <link rel="stylesheet" href="styles.css?v=20261001-6">
+  <link rel="stylesheet" href="styles.css?v=20261001-7">
 </head>
 <body>
 <header class="nav">
@@ -83,9 +83,18 @@
   </article>
 </section>
 
-<section id="bases" class="section">
-  <div class="section-title"><span>07</span><h2>Custom Bases & POIs</h2></div>
-  <div class="gallery"><div>IMPERIAL LOCATIONS</div><div>SITH LOCATIONS</div><div>JEDI LOCATIONS</div><div>TRADERS</div></div>
+<section id="bases" class="section hc-outpost">
+  <div class="section-title"><span>07</span><h2>HC Outpost</h2></div>
+  <p class="muted tips-intro">Browse custom base options and items available through the Admin Store.</p>
+  <div class="hc-grid">
+    <button class="hc-card" data-hc="bases">Custom Bases</button>
+    <button class="hc-card" data-hc="store">Admin Store</button>
+  </div>
+  <div id="hc-panel" class="tip-panel hc-panel" hidden>
+    <button class="hc-close tip-close" type="button">×</button>
+    <h3 id="hc-title"></h3>
+    <div id="hc-content"></div>
+  </div>
 </section>
 
 <section id="media" class="section">
@@ -104,6 +113,6 @@
 </main>
 
 <footer><strong>EMPIRE<span>Z</span></strong><p>Star Wars DayZ Community</p><p class="fine">Fan community server. Not affiliated with Lucasfilm, Disney, Bohemia Interactive, or DayZ.</p></footer>
-<script src="script.js?v=20261001-6"></script>
+<script src="script.js?v=20261001-7"></script>
 </body>
 </html>

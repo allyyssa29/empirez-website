@@ -982,15 +982,98 @@ const collectibleData = {
 
 
   sabers: {
-    title: "Sabers",
-    html: `
-      <p class="tip-note">
-        Saber information coming soon.
-      </p>
-    `
-  }
+  title: "Saber Collection",
+  html: `
+    <div class="saber-collection">
 
-};
+      <h4>Lightsabers</h4>
+      <p class="saber-note">
+        Collect both the <b>Overkill</b> and <b>Non-Overkill</b> versions unless otherwise noted.
+      </p>
+
+      <ul class="saber-list">
+        <li>Ahsoka Tano Lightsaber</li>
+        <li>Anakin Lightsaber</li>
+        <li>Cannibal Lightsaber</li>
+        <li>Count Dooku Lightsaber</li>
+        <li>Darksaber <span>(Normal Version Only)</span></li>
+        <li>Darth Grogu Lightsaber</li>
+        <li>Ezra Lightsaber</li>
+        <li>Grey Order Lightsaber</li>
+        <li>Harlon Lightsaber</li>
+        <li>Inquisitor Lightsaber</li>
+        <li>Kylo Lightsaber</li>
+        <li>Luke Skywalker Lightsaber</li>
+        <li>Mace Windu Lightsaber</li>
+        <li>Malgus Lightsaber</li>
+        <li>Maul Lightsaber</li>
+        <li>Nihilus Lightsaber</li>
+        <li>Obi-Wan Lightsaber</li>
+        <li>Palpatine Lightsaber</li>
+        <li>Plo Kloons Lightsaber</li>
+        <li>Poison Lightsaber</li>
+        <li>Revan Blue Lightsaber</li>
+        <li>Rey Skywalker Lightsaber</li>
+        <li>Sith Lightsaber</li>
+        <li>Starkiller Lightsaber</li>
+        <li>Talon Lightsaber</li>
+        <li>Vader Lightsaber</li>
+        <li>Yoda Lightsaber</li>
+        <li>Bane Lightsaber</li>
+        <li>Ventress Lightsaber</li>
+      </ul>
+
+
+      <h4>Achievement Sabers</h4>
+
+      <ul class="saber-list achievement-sabers">
+        <li>Holloween Lightsaber</li>
+        <li>Leia Lightsaber</li>
+        <li>Luke Guard Lightsaber</li>
+        <li>Revan Purple Lightsaber</li>
+        <li>Pink Lightsaber</li>
+        <li>Revan Red Lightsaber</li>
+        <li>Darksaber <span>(Overkill Version Only)</span></li>
+        <li>StellanGios Lightsaber</li>
+        <li>Sarin Lightsaber</li>
+      </ul>
+
+
+      <h4>Admin Sabers</h4>
+
+      <ul class="saber-list admin-sabers">
+        <li>Lyss' Doublesided Darksaber</li>
+        <li>Darth Grogu's Single Blade Saber</li>
+        <li>Darth Grogu's Double Bladed Saber</li>
+        <li>Freddy's Lightsaber</li>
+        <li>Craze's Lightsaber</li>
+        <li>Bumsaber</li>
+      </ul>
+
+
+      <div class="saber-challenge">
+        <h4>Custom Saber Challenge</h4>
+
+        <p>
+          Be the <b>first person to complete the Lightsaber collection</b>,
+          including both the Overkill and Non-Overkill versions of each
+          applicable saber, and win your own <b>custom saber!</b>
+        </p>
+
+        <p>
+          Achievement and Admin Sabers are <b>not required</b> to complete
+          the challenge.
+        </p>
+
+        <p>
+          Think you've completed it? Make a ticket and staff will verify
+          your collection.
+        </p>
+      </div>
+
+    </div>
+  `
+},
 
 
 // =====================================================

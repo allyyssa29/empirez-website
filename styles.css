@@ -1295,3 +1295,8 @@ footer strong {
     columns: 1;
   }
 }
+/* Enlarge hero background circle */
+.hero::before {
+  width: 820px !important;
+  height: 820px !important;
+}

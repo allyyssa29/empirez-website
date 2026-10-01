@@ -839,7 +839,7 @@ const gearData = {
     title: "",
     html: `
       <div class="gear-image-list">
-        <img src="achievementarmor.jpeg" alt="Achievement Armor">
+        <img src="achievementarmor.jpg" alt="Achievement Armor">
       </div>
     `
   },

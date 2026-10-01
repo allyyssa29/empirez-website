@@ -1206,3 +1206,28 @@ footer strong {
     max-height: none;
   }
 }
+/* LEGO COLLECTION LIST */
+
+.collectible-list ul {
+  columns: 3;
+  column-gap: 40px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.collectible-list li {
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+@media (max-width: 850px) {
+  .collectible-list ul {
+    columns: 2;
+  }
+}
+
+@media (max-width: 550px) {
+  .collectible-list ul {
+    columns: 1;
+  }
+}

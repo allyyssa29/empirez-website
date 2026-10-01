@@ -49,11 +49,20 @@
 
 <section id="tips" class="section">
   <div class="section-title"><span>03</span><h2>Server Tips</h2></div>
-  <div class="grid three">
-    <article class="card"><h3>New Survivor?</h3><p>Start here for essential EmpireZ information, traders and survival tips.</p></article>
-    <article class="card"><h3>Commlinks</h3><p>Learn how commlinks and server-specific systems work.</p></article>
-    <article class="card"><h3>Jawa Crates</h3><p>Find out how special crates, KOTHs and rewards work.</p></article>
+  <p class="muted tips-intro">Select a category to open the EmpireZ field guide.</p>
+  <div class="tips-grid">
+    <button class="tip-card" data-tip="getting">Getting Started</button>
+    <button class="tip-card" data-tip="factions">Factions & Territories</button>
+    <button class="tip-card" data-tip="traders">Traders</button>
+    <button class="tip-card" data-tip="events">World Events</button>
+    <button class="tip-card" data-tip="force">Force Powers</button>
+    <button class="tip-card" data-tip="loot">Loot Tiers</button>
+    <button class="tip-card" data-tip="storage">Storage & Crafting</button>
+    <button class="tip-card" data-tip="artifact">Artifact Crafting</button>
+    <button class="tip-card" data-tip="ships">Ships & Speeders</button>
+    <button class="tip-card" data-tip="quests">Quests</button>
   </div>
+  <div id="tip-panel" class="tip-panel" hidden><button class="tip-close" type="button">×</button><h3 id="tip-title"></h3><div id="tip-content"></div></div>
 </section>
 
 <section id="gear" class="section split">

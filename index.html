@@ -18,7 +18,7 @@
 
   <link
     rel="stylesheet"
-    href="styles.css?v=20261001-8"
+    href="styles.css?v=20261001-10"
   >
 </head>
 
@@ -597,39 +597,36 @@
 ===================================================== -->
 
 <section id="media" class="section">
-
   <div class="section-title">
-
     <span>08</span>
-
-    <h2>
-      Media
-    </h2>
-
+    <h2>Media</h2>
   </div>
 
+  <p class="muted media-intro">Screenshots, event photos and community highlights from across EmpireZ.</p>
 
-  <p class="muted">
-    Screenshots, event photos, videos and community highlights.
-  </p>
-
-
-  <div class="media-grid">
-
-    <div></div>
-
-    <div></div>
-
-    <div></div>
-
-    <div></div>
-
-    <div></div>
-
-    <div></div>
-
+  <div class="media-gallery">
+    <button class="media-item media-featured" type="button" data-full="scarifpicture.jpeg" data-title="Scarif">
+      <img src="scarifpicture.jpeg" alt="EmpireZ Scarif"><span>Scarif</span>
+    </button>
+    <button class="media-item" type="button" data-full="speederrace.jpeg" data-title="Speeder Race">
+      <img src="speederrace.jpeg" alt="EmpireZ Speeder Race"><span>Speeder Race</span>
+    </button>
+    <button class="media-item" type="button" data-full="halloweentrader.jpeg" data-title="Halloween Trader">
+      <img src="halloweentrader.jpeg" alt="EmpireZ Halloween Trader"><span>Halloween Trader</span>
+    </button>
+    <button class="media-item" type="button" data-full="boxing.jpeg" data-title="Boxing">
+      <img src="boxing.jpeg" alt="EmpireZ Boxing Event"><span>Boxing</span>
+    </button>
+    <button class="media-item media-wide" type="button" data-full="staffteam.jpeg" data-title="EmpireZ Staff Team">
+      <img src="staffteam.jpeg" alt="EmpireZ Staff Team"><span>EmpireZ Staff Team</span>
+    </button>
   </div>
 
+  <div class="media-lightbox" id="media-lightbox" hidden>
+    <button class="media-lightbox-close" type="button" aria-label="Close image">×</button>
+    <img id="media-lightbox-image" src="" alt="">
+    <div id="media-lightbox-title" class="media-lightbox-title"></div>
+  </div>
 </section>
 
 
@@ -717,7 +714,7 @@
      JAVASCRIPT
 ===================================================== -->
 
-<script src="script.js?v=20261001-8"></script>
+<script src="script.js?v=20261001-10"></script>
 
 
 </body>

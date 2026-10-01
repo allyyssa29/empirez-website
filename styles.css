@@ -1039,3 +1039,22 @@ footer strong {
     margin: 16px auto 22px;
   }
 }
+/* Tighten Hero Logo Spacing */
+
+.hero-logo {
+  width: min(820px, 80vw);
+  max-height: none;
+  margin: -40px auto -85px;
+}
+
+.hero .lead {
+  margin-top: 0;
+}
+
+.hero .sub {
+  margin-top: 16px;
+}
+
+.hero .actions {
+  margin-top: 24px;
+}

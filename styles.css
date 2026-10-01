@@ -1058,3 +1058,63 @@ footer strong {
 .hero .actions {
   margin-top: 24px;
 }
+
+
+/* =====================================================
+   GEAR + COLLECTIBLES CLICKABLE GUIDES
+===================================================== */
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+
+.guide-card {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 92px;
+  padding: 24px 30px;
+  background: linear-gradient(135deg,#16090b 0%,#0b0b0d 60%,#08090a 100%);
+  border: 1px solid #8f1720;
+  color: #f4f4f4;
+  font-family: Orbitron,sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  clip-path: polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+  box-shadow: inset 0 0 24px rgba(169,8,18,.08),0 0 8px rgba(224,25,36,.12);
+  transition: transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+
+.guide-card:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 4px;
+  height: 50px;
+  background: #e01924;
+  box-shadow: 0 0 14px #e01924;
+}
+
+.guide-card:hover,
+.guide-card.active {
+  transform: translateY(-3px);
+  border-color: #e01924;
+  background: linear-gradient(135deg,#250a0e,#0c0c0e);
+  box-shadow: 0 0 22px rgba(224,25,36,.55),inset 0 0 30px rgba(169,8,18,.15);
+}
+
+.guide-panel[hidden] { display: none !important; }
+.guide-panel { display: block !important; }
+
+@media (max-width: 850px) {
+  .guide-grid { grid-template-columns: 1fr; }
+}

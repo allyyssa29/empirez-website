@@ -18,7 +18,7 @@
 
   <link
     rel="stylesheet"
-    href="styles.css?v=20261001-11"
+    href="styles.css?v=20261001-12"
 >
 </head>
 
@@ -76,7 +76,7 @@
   </p>
 
   <p class="sub">
-    PvE • PvP Zones • PvP Raid • Factions • Traders • Events
+    PvE • PvP Raid • Factions • Traders • Events
   </p>
 
   <div class="actions">
@@ -124,7 +124,7 @@
     <article class="card server">
 
       <div class="tag">
-        PVE • PVP ZONES
+        PVE
       </div>
 
       <h3>
@@ -132,7 +132,7 @@
       </h3>
 
       <p>
-        Explore, trade, build and survive with designated PvP zones.
+        Explore, trade, build and survive in a fully PvE galaxy.
       </p>
 
       <div class="ip">
@@ -440,42 +440,27 @@
      GEAR
 ===================================================== -->
 
-<section id="gear" class="section split">
-
-
-  <div>
-
-    <div class="section-title">
-
-      <span>05</span>
-
-      <h2>
-        Gear Guide
-      </h2>
-
-    </div>
-
-    <p class="muted">
-      A visual catalog for weapons, armor, clothing,
-      equipment and special items.
-    </p>
-
+<section id="gear" class="section">
+  <div class="section-title">
+    <span>05</span>
+    <h2>Gear Guide</h2>
   </div>
 
+  <p class="muted tips-intro">Select a category to view the EmpireZ gear guide.</p>
 
-  <div class="placeholder">
-
-    GEAR DATABASE
-
-    <br>
-
-    <small>
-      Coming soon
-    </small>
-
+  <div class="guide-grid gear-grid">
+    <button class="guide-card gear-card" type="button" data-gear="tier1">TIER 1</button>
+    <button class="guide-card gear-card" type="button" data-gear="tier2">TIER 2</button>
+    <button class="guide-card gear-card" type="button" data-gear="tier3">TIER 3</button>
+    <button class="guide-card gear-card" type="button" data-gear="achievement">ACHIEVEMENT ARMOR</button>
+    <button class="guide-card gear-card" type="button" data-gear="nbc">NBC GEAR</button>
   </div>
 
-
+  <div id="gear-panel" class="tip-panel guide-panel" hidden>
+    <button class="tip-close gear-close" type="button">×</button>
+    <h3 id="gear-title"></h3>
+    <div id="gear-content"></div>
+  </div>
 </section>
 
 
@@ -483,45 +468,25 @@
      COLLECTIBLES
 ===================================================== -->
 
-<section
-  id="collectibles"
-  class="section split reverse">
-
-
-  <div class="placeholder">
-
-    COLLECTIBLES
-
-    <br>
-
-    <small>
-      Coming soon
-    </small>
-
+<section id="collectibles" class="section">
+  <div class="section-title">
+    <span>06</span>
+    <h2>Collectibles</h2>
   </div>
 
+  <p class="muted tips-intro">Select a category to view collectible information.</p>
 
-  <div>
-
-    <div class="section-title">
-
-      <span>06</span>
-
-      <h2>
-        Collectibles
-      </h2>
-
-    </div>
-
-
-    <p class="muted">
-      Track rare finds, collection rewards and
-      special EmpireZ items.
-    </p>
-
+  <div class="guide-grid collectibles-grid">
+    <button class="guide-card collectible-card" type="button" data-collectible="legos">LEGOS</button>
+    <button class="guide-card collectible-card" type="button" data-collectible="cards">TRADING CARDS</button>
+    <button class="guide-card collectible-card" type="button" data-collectible="sabers">SABERS</button>
   </div>
 
-
+  <div id="collectibles-panel" class="tip-panel guide-panel" hidden>
+    <button class="tip-close collectibles-close" type="button">×</button>
+    <h3 id="collectibles-title"></h3>
+    <div id="collectibles-content"></div>
+  </div>
 </section>
 
 
@@ -716,7 +681,7 @@
      JAVASCRIPT
 ===================================================== -->
 
-<script src="script.js?v=20261001-10"></script>
+<script src="script.js?v=20261001-12"></script>
 
 
 </body>

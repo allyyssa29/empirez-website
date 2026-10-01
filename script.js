@@ -925,13 +925,50 @@ if (gearPanel) {
 const collectibleData = {
 
   legos: {
-    title: "Legos",
-    html: `
-      <p class="tip-note">
-        Lego collectible information coming soon.
-      </p>
-    `
-  },
+  title: "LEGO Collection",
+  html: `
+    <div class="collectible-list">
+      <ul>
+        <li>Amidala Lego</li>
+        <li>B1 Droid Lego</li>
+        <li>Boba Fett Lego</li>
+        <li>Chewy Lego</li>
+        <li>Cracked Helmet Kylo Lego</li>
+        <li>Darth Grogu Lego</li>
+        <li>Greedo Lego</li>
+        <li>Jango Fett Lego</li>
+        <li>Jedi Guard Lego</li>
+        <li>Ahsoka Lego</li>
+        <li>Anakin Lego</li>
+        <li>Burnt Anakin Lego</li>
+        <li>C3PO Lego</li>
+        <li>Clonetrooper Lego</li>
+        <li>Com Cody Lego</li>
+        <li>Kylo Ren Lego</li>
+        <li>Luke Lego</li>
+        <li>Darth Maul Lego</li>
+        <li>Obiwan Lego</li>
+        <li>R2D2 Lego</li>
+        <li>Rey Lego</li>
+        <li>Vader Lego</li>
+        <li>Yoda Lego</li>
+        <li>Blue Milk Luke Lego</li>
+        <li>Nihulus Lego</li>
+        <li>Pretorian Guard Lego</li>
+        <li>Red Mando Lego</li>
+        <li>Sabine Lego</li>
+        <li>Silver3po Lego</li>
+        <li>Skull Mando Lego</li>
+        <li>Spider Maul Lego</li>
+        <li>Starkiller Lego</li>
+        <li>SwimTrooper Lego</li>
+        <li>Gold Xwing Lego</li>
+        <li>Chrome Xwing Lego</li>
+        <li>Jawa Lego</li>
+      </ul>
+    </div>
+  `
+},
 
 
   cards: {

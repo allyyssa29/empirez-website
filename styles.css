@@ -34,3 +34,17 @@ footer{text-align:center;padding:70px 20px;border-top:1px solid #242629;color:#7
 #tips .tip-panel[hidden]{display:none!important}
 #tips .tip-panel{display:block!important}
 @media(max-width:850px){#tips .tips-grid{grid-template-columns:1fr!important}}
+
+/* Staff cards */
+.person{min-height:150px!important;padding:28px 24px!important;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.person h3{margin:0 0 8px!important}.person p{margin:0!important}
+.person:before{height:52px!important;top:calc(50% - 26px)!important}
+.person.berzerk{border-color:#6d3aa8!important;background:linear-gradient(145deg,#160d22,#090a0b)!important;box-shadow:inset 0 0 28px rgba(126,70,190,.08)}
+.person.berzerk:before{background:#8d52d1!important;box-shadow:0 0 14px #8d52d1!important}
+.person.lyss{border-color:#c97972!important;background:linear-gradient(145deg,#211011,#090a0b)!important;box-shadow:inset 0 0 28px rgba(244,164,151,.08)}
+.person.lyss:before{background:#f4a497!important;box-shadow:0 0 14px #f4a497!important}
+.person.freddy{border-color:#8f1720!important;background:linear-gradient(145deg,#1d0b0e,#090a0b)!important;box-shadow:inset 0 0 28px rgba(224,25,36,.08)}
+.person.freddy:before{background:#e01924!important;box-shadow:0 0 14px #e01924!important}
+.person.bum{border-color:#278e91!important;background:linear-gradient(145deg,#0a1b1c,#090a0b)!important;box-shadow:inset 0 0 28px rgba(54,198,202,.08)}
+.person.bum:before{background:#36c6ca!important;box-shadow:0 0 14px #36c6ca!important}
+.person:hover{transform:translateY(-2px);box-shadow:0 0 20px rgba(255,255,255,.08)}

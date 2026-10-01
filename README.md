@@ -1,3 +1,3 @@
 # EmpireZ Website
 
-Official website for the EmpireZ Star Wars DayZ servers.
+Static community website for EmpireZ: Star Wars DayZ.

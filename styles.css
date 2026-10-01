@@ -1158,3 +1158,19 @@ footer strong {
   top: 43% !important;
   transform: translate(-50%, -50%) !important;
 }
+/* =========================================
+   GALAXY MAP
+   ========================================= */
+
+.animal-spawn-map {
+  padding: 0 !important;
+  display: block !important;
+  overflow: hidden;
+}
+
+.animal-spawn-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

@@ -48,3 +48,9 @@ footer{text-align:center;padding:70px 20px;border-top:1px solid #242629;color:#7
 .person.bum{border-color:#278e91!important;background:linear-gradient(145deg,#0a1b1c,#090a0b)!important;box-shadow:inset 0 0 28px rgba(54,198,202,.08)}
 .person.bum:before{background:#36c6ca!important;box-shadow:0 0 14px #36c6ca!important}
 .person:hover{transform:translateY(-2px);box-shadow:0 0 20px rgba(255,255,255,.08)}
+
+/* Staff sizing/color refinement */
+.person{min-height:125px!important;padding:20px 22px!important}
+.person:before{height:42px!important;top:calc(50% - 21px)!important}
+.person.lyss{border-color:#e57f9a!important;background:linear-gradient(145deg,#261016,#090a0b)!important;box-shadow:inset 0 0 28px rgba(255,132,166,.11)!important}
+.person.lyss:before{background:#ff8eaa!important;box-shadow:0 0 15px #ff8eaa!important}

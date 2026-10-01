@@ -1,26 +1,41 @@
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
-  const id=a.getAttribute('href');
-  if(id==='#')return;
-  const el=document.querySelector(id);
-  if(el){
-    e.preventDefault();
-    el.scrollIntoView({behavior:'smooth'});
-  }
-}));
+document.querySelectorAll('a[href^="#"]').forEach(a =>
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id === '#') return;
 
-const tipData={
+    const el = document.querySelector(id);
 
-  getting:{
-    title:"Getting Started",
-    html:`
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  })
+);
+
+
+// =====================================================
+// SERVER TIPS
+// =====================================================
+
+const tipData = {
+
+  getting: {
+    title: "Getting Started",
+    html: `
       <h4>Server Info</h4>
-      <p><b>EmpireZ : Star Wars : PvE with PvP Zones</b><br>
-      IP Address: 64.20.63.70:2502</p>
 
-      <p><b>EmpireZ : Star Wars : PVP Raid</b><br>
-      IP Address: 64.20.63.70:2302</p>
+      <p>
+        <b>EmpireZ : Star Wars : PvE with PvP Zones</b><br>
+        IP Address: 64.20.63.70:2502
+      </p>
+
+      <p>
+        <b>EmpireZ : Star Wars : PVP Raid</b><br>
+        IP Address: 64.20.63.70:2302
+      </p>
 
       <h4>Update Mods</h4>
+
       <ul>
         <li>See announcements for what mods updated.</li>
         <li>Type in the mod name.</li>
@@ -29,12 +44,14 @@ const tipData={
       </ul>
 
       <h4>Commands</h4>
+
       <p>
         <b>!tips</b> — Links to all server tips categories<br>
         <b>!clip</b> — Link to clipping software
       </p>
 
       <h4>Other Tips</h4>
+
       <ul>
         <li>Use a wrench to flip your speeder.</li>
         <li>Auto-Run feature available.</li>
@@ -48,14 +65,16 @@ const tipData={
       </ul>
 
       <p class="tip-note">
-        Lost items: Admins cannot compensate lost items without proof. Take video clips.
+        Lost items: Admins cannot compensate lost items without proof.
+        Take video clips.
       </p>
     `
   },
 
-  factions:{
-    title:"Factions & Territories",
-    html:`
+
+  factions: {
+    title: "Factions & Territories",
+    html: `
       <ul>
         <li>A flag kit must be placed and fully built within 7 days.</li>
         <li>Flags cover a 60m radius.</li>
@@ -72,10 +91,12 @@ const tipData={
     `
   },
 
-  traders:{
-    title:"Traders",
-    html:`
+
+  traders: {
+    title: "Traders",
+    html: `
       <h4>Buy</h4>
+
       <ul>
         <li>Limited building supplies</li>
         <li>BBP wallpapers & decor</li>
@@ -83,12 +104,14 @@ const tipData={
       </ul>
 
       <h4>Sell</h4>
+
       <ul>
         <li>Weapons</li>
         <li>Artifacts</li>
       </ul>
 
       <h4>Important Notes</h4>
+
       <ul>
         <li>A map marker is available for “Limited Trader”.</li>
         <li>Do not leave ships at trader when logging off.</li>
@@ -97,24 +120,51 @@ const tipData={
     `
   },
 
-  events:{
-    title:"World Events",
-    html:`
+
+  events: {
+    title: "World Events",
+    html: `
       <ul>
-        <li><b>Jawa Crate — Tier 4:</b> notification plays and a map marker appears.</li>
-        <li><b>Krennic & Mando Ships:</b> random map spawns; more frequent in PvP zones; no announcement.</li>
-        <li><b>TIE Fighter Wrecks:</b> any tier; increased frequency in PvP zones.</li>
-        <li><b>Mando Safes:</b> Tier 3–4 military.</li>
-        <li><b>Loot Droids (Black):</b> Tier 3–4 military.</li>
-        <li><b>Loot Droids (Color):</b> any military tier.</li>
+        <li>
+          <b>Jawa Crate — Tier 4:</b>
+          Notification plays and a map marker appears.
+        </li>
+
+        <li>
+          <b>Krennic & Mando Ships:</b>
+          Random map spawns; more frequent in PvP zones; no announcement.
+        </li>
+
+        <li>
+          <b>TIE Fighter Wrecks:</b>
+          Any tier; increased frequency in PvP zones.
+        </li>
+
+        <li>
+          <b>Mando Safes:</b>
+          Tier 3–4 military.
+        </li>
+
+        <li>
+          <b>Loot Droids (Black):</b>
+          Tier 3–4 military.
+        </li>
+
+        <li>
+          <b>Loot Droids (Color):</b>
+          Any military tier.
+        </li>
       </ul>
     `
   },
 
-  force:{
-    title:"Force Powers",
-    html:`
-      <p><i>Must be purchased in this order.</i></p>
+
+  force: {
+    title: "Force Powers",
+    html: `
+      <p>
+        <i>Must be purchased in this order.</i>
+      </p>
 
       <ul>
         <li>Force Push — 10 Sith + 10 Jedi Medallions (F1)</li>
@@ -131,16 +181,18 @@ const tipData={
       </p>
 
       <p>
-        A “True Sith” or “True Jedi” chat tag is added after all Force powers
-        are acquired; open a ticket with proof of the last power.
+        A “True Sith” or “True Jedi” chat tag is added after all Force
+        powers are acquired. Open a ticket with proof of the last power.
       </p>
     `
   },
 
-  loot:{
-    title:"Loot Tiers",
-    html:`
+
+  loot: {
+    title: "Loot Tiers",
+    html: `
       <h4>Tier 1–3</h4>
+
       <p>
         Armor: Rebels, Clones, Stormtroopers, Bounty Hunters, Mandos,
         Smugglers, Tusken Raiders.<br>
@@ -148,35 +200,44 @@ const tipData={
       </p>
 
       <h4>Tier 3–4</h4>
-      <p>Weapons x3, Loot Droids, Mando Safes.</p>
+
+      <p>
+        Weapons x3, Loot Droids, Mando Safes.
+      </p>
 
       <h4>Tier 4 — PvP Zones</h4>
+
       <p>
-        Rare armor variants, ammo x4, NBC filters/clothing, DC-15a + mags,
-        E-5 + mags, DLT mags, 30-round mags, AKM, Commando backpacks,
-        suppressors & ACOGs, M79/ASVAL, Mando crates, Loot Droids,
-        extra TIE wrecks, Jawa crate loot, gold/chrome Mando parts,
+        Rare armor variants, ammo x4, NBC filters/clothing,
+        DC-15a + mags, E-5 + mags, DLT mags, 30-round mags,
+        AKM, Commando backpacks, suppressors & ACOGs,
+        M79/ASVAL, Mando crates, Loot Droids, extra TIE wrecks,
+        Jawa crate loot, gold/chrome Mando parts,
         exclusive Level 2 clothing sets.
       </p>
 
       <h4>Imperial Base</h4>
+
       <p>
         Weapons x4, ammo x4, Kyber Crystals, Empty Datacards,
         Star Maps, Bunker Charges, Clone Commanders.
       </p>
 
       <h4>Crash & Ship Loot</h4>
+
       <p>
-        TIE Fighter Wrecks can contain everything from water bottles to
-        artifacts, weapons and valuables. Krennic Ship & Razorcrest can
-        contain Empty Chain Code or Datapad.
+        TIE Fighter Wrecks can contain everything from water bottles
+        to artifacts, weapons and valuables.
+
+        Krennic Ship & Razorcrest can contain Empty Chain Code or Datapad.
       </p>
     `
   },
 
-  storage:{
-    title:"Storage & Crafting",
-    html:`
+
+  storage: {
+    title: "Storage & Crafting",
+    html: `
       <p>
         All custom storage containers hold <b>1,000 slots</b>.
         Exception: Wood Crate uses vanilla storage.
@@ -190,31 +251,52 @@ const tipData={
         <li>Locker — 10× Sheet Metal + 70× Nails</li>
         <li>Gun Wall — 6× Sheet Metal + 70× Nails</li>
         <li>Gear Stand — 1× Log + 70× Nails</li>
-        <li>All Other Storage — 2× Sheet Metal + box of Nails</li>
+        <li>All Other Storage — 2× Sheet Metal + Box of Nails</li>
       </ul>
     `
   },
 
-  artifact:{
-    title:"Artifact Crafting",
-    html:`
+
+  artifact: {
+    title: "Artifact Crafting",
+    html: `
       <h4>Grey Order Saber</h4>
+
       <ul>
-        <li>Yellow Kyber Crystal + Sword → Grey Order Lightsaber</li>
-        <li>Grey Order Lightsaber + Yellow Kyber Crystal → Overkill Grey Order Lightsaber</li>
+        <li>
+          Yellow Kyber Crystal + Sword → Grey Order Lightsaber
+        </li>
+
+        <li>
+          Grey Order Lightsaber + Yellow Kyber Crystal →
+          Overkill Grey Order Lightsaber
+        </li>
       </ul>
 
       <h4>Swords</h4>
+
       <ul>
-        <li>Black Kyber Crystal + Sword → Sith Warblade</li>
-        <li>Crimson Kyber Crystal + Crimson Nightsister Sword</li>
-        <li>Purple Kyber Crystal + Sword → Jedi Force Blade</li>
+        <li>
+          Black Kyber Crystal + Sword → Sith Warblade
+        </li>
+
+        <li>
+          Crimson Kyber Crystal + Crimson Nightsister Sword
+        </li>
+
+        <li>
+          Purple Kyber Crystal + Sword → Jedi Force Blade
+        </li>
       </ul>
 
       <h4>Nightsister</h4>
-      <p>Nightsister Force Crystal + Mime Mask → Darth Maul Mask</p>
+
+      <p>
+        Nightsister Force Crystal + Mime Mask → Darth Maul Mask
+      </p>
 
       <h4>Vibroblades</h4>
+
       <p>
         Pink Kyber Crystal + Machete → Vibroblade<br>
         Orange Kyber Crystal + Machete → Vibroblade
@@ -228,103 +310,165 @@ const tipData={
     `
   },
 
-  ships:{
-    title:"Ships & Speeders",
-    html:`
+
+  ships: {
+    title: "Ships & Speeders",
+    html: `
       <h4>Speeders</h4>
+
       <p>
-        Mini Speeder Bike • Endor Speeder Bike •
-        Endor Speeder Bike (Red/Green/Blue) • Hover Bike •
-        Bloodfin Speeder • Rey's Speeder •
+        Mini Speeder Bike •
+        Endor Speeder Bike •
+        Endor Speeder Bike (Red/Green/Blue) •
+        Hover Bike •
+        Bloodfin Speeder •
+        Rey's Speeder •
         Solo StarWars Speeder (2 seater)
       </p>
 
       <h4>Fighters & Small Ships</h4>
+
       <p>
-        TIE Fighter • TIE Interceptor • TIE Silencer • Royal TIE Fighter •
-        Snow Speeder • Recon Speeder • Trident Fighter •
-        X-Wing T-70 (OG/Teal/Red) • Partisan X-Wing •
-        Black One • The Pink One • Scimitar • Soulless
+        TIE Fighter •
+        TIE Interceptor •
+        TIE Silencer •
+        Royal TIE Fighter •
+        Snow Speeder •
+        Recon Speeder •
+        Trident Fighter •
+        X-Wing T-70 (OG/Teal/Red) •
+        Partisan X-Wing •
+        Black One •
+        The Pink One •
+        Scimitar •
+        Soulless
       </p>
 
       <h4>Transports</h4>
-      <p>FreckTransport • Imperial Shuttle</p>
+
+      <p>
+        FreckTransport • Imperial Shuttle
+      </p>
 
       <h4>LAAT Dropships</h4>
+
       <p>
-        LAAT Dropship Blue • Green • Black N White Partisan •
-        Shock Battalion • 187th Infantry Battalion • Desert Camo
+        LAAT Dropship Blue •
+        Green •
+        Black N White Partisan •
+        Shock Battalion •
+        187th Infantry Battalion •
+        Desert Camo
       </p>
     `
   },
 
-  quests:{
-    title:"Quests",
-    html:`
+
+  quests: {
+    title: "Quests",
+    html: `
       <ul>
         <li>Imperial Keycard → Opens Imperial Bunker</li>
-        <li>Ion Charge → Opens Hoth Bunker + Mando Bunker</li>
-        <li>Starmap (Red/Blue/Green) + Empty Data Card → Unlock Loot Droids</li>
-        <li>Chain Codes + Datapad → Unlock Mando Safes</li>
-        <li>Blue Kyber + Blue Kyber → Jedi Holocron → Jedi Hideout</li>
-        <li>Red Kyber + Red Kyber → Sith Holocron → Sith Temple</li>
-        <li>Green Kyber + Green Kyber → Nihilus Holocron → Mustafar Temple</li>
+
+        <li>
+          Ion Charge → Opens Hoth Bunker + Mando Bunker
+        </li>
+
+        <li>
+          Starmap (Red/Blue/Green) + Empty Data Card →
+          Unlock Loot Droids
+        </li>
+
+        <li>
+          Chain Codes + Datapad → Unlock Mando Safes
+        </li>
+
+        <li>
+          Blue Kyber + Blue Kyber →
+          Jedi Holocron → Jedi Hideout
+        </li>
+
+        <li>
+          Red Kyber + Red Kyber →
+          Sith Holocron → Sith Temple
+        </li>
+
+        <li>
+          Green Kyber + Green Kyber →
+          Nihilus Holocron → Mustafar Temple
+        </li>
       </ul>
     `
   }
+
 };
 
 
+// =====================================================
 // SERVER TIPS CLICKABLE CARDS
+// =====================================================
 
-const tipPanel=document.getElementById("tip-panel");
+const tipPanel = document.getElementById("tip-panel");
 
-if(tipPanel){
+if (tipPanel) {
 
-  document.querySelectorAll(".tip-card").forEach(btn=>
-    btn.addEventListener("click",()=>{
+  document.querySelectorAll(".tip-card").forEach(btn => {
 
-      const d=tipData[btn.dataset.tip];
+    btn.addEventListener("click", () => {
 
-      document.querySelectorAll(".tip-card").forEach(b=>
+      const d = tipData[btn.dataset.tip];
+
+      if (!d) return;
+
+      document.querySelectorAll(".tip-card").forEach(b =>
         b.classList.remove("active")
       );
 
       btn.classList.add("active");
 
-      document.getElementById("tip-title").textContent=d.title;
-      document.getElementById("tip-content").innerHTML=d.html;
+      document.getElementById("tip-title").textContent = d.title;
+      document.getElementById("tip-content").innerHTML = d.html;
 
-      tipPanel.hidden=false;
+      tipPanel.hidden = false;
 
       tipPanel.scrollIntoView({
-        behavior:"smooth",
-        block:"nearest"
+        behavior: "smooth",
+        block: "nearest"
       });
 
-    })
-  );
-
-  document.querySelector(".tip-close").addEventListener("click",()=>{
-
-    tipPanel.hidden=true;
-
-    document.querySelectorAll(".tip-card").forEach(b=>
-      b.classList.remove("active")
-    );
+    });
 
   });
+
+
+  const tipClose = document.querySelector(".tip-close");
+
+  if (tipClose) {
+
+    tipClose.addEventListener("click", () => {
+
+      tipPanel.hidden = true;
+
+      document.querySelectorAll(".tip-card").forEach(b =>
+        b.classList.remove("active")
+      );
+
+    });
+
+  }
 
 }
 
 
+// =====================================================
 // HC OUTPOST
+// =====================================================
 
-const outpostData={
+const outpostData = {
 
-  bases:{
-    title:"Custom Bases",
-    html:`
+  bases: {
+    title: "Custom Bases",
+    html: `
       <p>
         Browse custom EmpireZ base options available through the HC Outpost.
       </p>
@@ -335,61 +479,212 @@ const outpostData={
     `
   },
 
-  store:{
-    title:"Admin Store",
-    html:`
+
+  store: {
+    title: "Admin Store",
+    html: `
+
+      <h4>How to Make a Purchase</h4>
+
       <p>
-        Browse items and services available through the EmpireZ Admin Store.
+        Open a ticket and tell us what you'd like to buy.
+        Feel free to ask any questions!
       </p>
 
-      <p class="tip-note">
-        Admin Store catalog coming soon.
+      <p>
+        <i>
+          If you see a static ship on the map you'd like to purchase,
+          just ask — we have many more that aren't currently on display.
+        </i>
       </p>
+
+      <p>
+        Have a suggestion for a new item? Let us know!
+      </p>
+
+
+      <p class="tip-note">
+        ⚠️ Griefing or dismantling the shop = IMMEDIATE BAN<br>
+        ⚠️ All items are non-refundable.
+      </p>
+
+
+      <h4>Admin Shop Price List</h4>
+
+      <p>
+        <i>All prices are listed in Trade Federation Coins (TF Coins).</i>
+      </p>
+
+
+      <h4>Ships</h4>
+
+      <ul>
+        <li>
+          <b>All Static Ships</b> — 800 TF Coins
+        </li>
+      </ul>
+
+
+      <h4>Posters & Custom Items</h4>
+
+      <ul>
+
+        <li>
+          <b>Posters</b> — 25 TF Coins
+        </li>
+
+        <li>
+          <b>Large Posters</b> — 50 TF Coins
+        </li>
+
+        <li>
+          <b>Custom Poster</b> — 300 TF Coins
+          <br>
+          Star Wars-related artwork or a sign. No profanity.
+          <br><br>
+          <small>
+            1024×512 — Rectangle Frame
+          </small>
+          <br>
+          <small>
+            512×512 or 1024×1024 — Square Frame
+          </small>
+        </li>
+
+        <li>
+          <b>Custom Flag</b> — 300 TF Coins
+        </li>
+
+      </ul>
+
+
+      <h4>Decorations & Statics</h4>
+
+      <ul>
+
+        <li>
+          <b>Buff Yoda</b> — 300 TF Coins
+        </li>
+
+        <li>
+          <b>Holo Table</b> — 150 TF Coins
+        </li>
+
+        <li>
+          <b>Floating Rock</b> — 150 TF Coins
+        </li>
+
+        <li>
+          <b>Landing Pad (Gray)</b> — 500 TF Coins
+        </li>
+
+        <li>
+          <b>Carbonite</b> — 100 TF Coins
+        </li>
+
+        <li>
+          <b>Helmet Stakes</b> — 50 TF Coins
+        </li>
+
+        <li>
+          <b>Static Droids</b> — 100 TF Coins
+        </li>
+
+        <li>
+          <b>Mythosaur Skull</b> — 75 TF Coins
+        </li>
+
+        <li>
+          <b>Jabba's Palace Skull</b> — 75 TF Coins
+        </li>
+
+        <li>
+          <b>Banners</b> — 50 TF Coins
+        </li>
+
+        <li>
+          <b>Jedi Statue</b> — 100 TF Coins
+        </li>
+
+        <li>
+          <b>Static Jawa</b> — 50 TF Coins
+        </li>
+
+        <li>
+          <b>Static Darth Grogu</b> — 100 TF Coins
+        </li>
+
+        <li>
+          <b>Felusia Flowers</b> — 75 TF Coins
+        </li>
+
+        <li>
+          <b>Dragon Skeleton</b> — 150 TF Coins
+        </li>
+
+        <li>
+          <b>Control Screens</b> — 50 TF Coins
+        </li>
+
+      </ul>
+
     `
   }
 
 };
 
-const outpostPanel=document.getElementById("outpost-panel");
 
-if(outpostPanel){
+// =====================================================
+// HC OUTPOST CLICKABLE CARDS
+// =====================================================
 
-  document.querySelectorAll(".outpost-card").forEach(btn=>
-    btn.addEventListener("click",()=>{
+const outpostPanel = document.getElementById("outpost-panel");
 
-      const d=outpostData[btn.dataset.outpost];
+if (outpostPanel) {
 
-      document.querySelectorAll(".outpost-card").forEach(b=>
+  document.querySelectorAll(".outpost-card").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      const d = outpostData[btn.dataset.outpost];
+
+      if (!d) return;
+
+      document.querySelectorAll(".outpost-card").forEach(b =>
         b.classList.remove("active")
       );
 
       btn.classList.add("active");
 
-      document.getElementById("outpost-title").textContent=d.title;
-      document.getElementById("outpost-content").innerHTML=d.html;
+      document.getElementById("outpost-title").textContent = d.title;
+      document.getElementById("outpost-content").innerHTML = d.html;
 
-      outpostPanel.hidden=false;
+      outpostPanel.hidden = false;
 
       outpostPanel.scrollIntoView({
-        behavior:"smooth",
-        block:"nearest"
+        behavior: "smooth",
+        block: "nearest"
       });
 
-    })
-  );
+    });
 
-  const outpostClose=document.querySelector(".outpost-close");
+  });
 
-  if(outpostClose){
-    outpostClose.addEventListener("click",()=>{
 
-      outpostPanel.hidden=true;
+  const outpostClose = document.querySelector(".outpost-close");
 
-      document.querySelectorAll(".outpost-card").forEach(b=>
+  if (outpostClose) {
+
+    outpostClose.addEventListener("click", () => {
+
+      outpostPanel.hidden = true;
+
+      document.querySelectorAll(".outpost-card").forEach(b =>
         b.classList.remove("active")
       );
 
     });
+
   }
 
 }

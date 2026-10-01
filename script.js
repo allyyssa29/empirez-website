@@ -468,16 +468,33 @@ const outpostData = {
 
   bases: {
     title: "Custom Bases",
-    html: `
-      <p>
-        Browse custom EmpireZ base options available through the HC Outpost.
-      </p>
+  html: `
+    <h4>How to Purchase</h4>
 
-      <p class="tip-note">
-        Custom base catalog coming soon.
-      </p>
-    `
-  },
+    <p>
+      To purchase a custom base, please make a ticket and we will come
+      place it for you.
+    </p>
+
+    <p>
+      If you decide to return a purchased custom base, you'll receive
+      <b>50% of the original price back.</b>
+    </p>
+
+    <p>
+      <b>One custom base per member in a group.</b>
+    </p>
+
+    <a
+      class="button"
+      href="https://discord.com/channels/1171005376196517918/1351331443363811418"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VIEW CUSTOM BASES
+    </a>
+  `
+},
 
 
   store: {

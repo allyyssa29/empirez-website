@@ -305,10 +305,10 @@ const tipData = {
       </p>
 
       <img
-        class="artifact-guide"
         src="artifact-crafting.svg"
-        alt="EmpireZ Elemental Crafting Recipes Part 1"
-      >
+        alt="EmpireZ Artifact Crafting Guide"
+        class="artifact-guide"
+    >
     `
   },
 

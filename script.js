@@ -983,6 +983,13 @@ const collectibleData = {
         <li>Chrome Xwing Lego</li>
         <li>Jawa Lego</li>
       </ul>
+
+      <img
+        src="legocollection.jpg"
+        alt="EmpireZ LEGO Collection"
+        class="lego-collection-image"
+      >
+
     </div>
   `
 },

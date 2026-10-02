@@ -1165,3 +1165,399 @@ if (collectiblesPanel) {
   }
 
 }
+
+// =====================================================
+// RULES
+// =====================================================
+
+const rulesData = {
+
+  pve: {
+    title: "PVE Server Rules",
+    html: `
+
+      <div class="server-rules">
+
+        <h4>Gameplay & Conduct</h4>
+        <ul>
+          <li>Do not touch, take, or loot another player's items or base without permission.</li>
+
+          <li>Blocking players in PvE, including movement, vision, interactions, or entry/exit, will result in a warning.</li>
+
+          <li>Following players and being a nuisance is not allowed.</li>
+
+          <li>For locked containers, whoever opens the container first owns the contents.</li>
+
+          <li>Blocking containers, stealing contents, or piggybacking into locked areas is prohibited.</li>
+
+          <li>Items disappearing shortly before a server restart will not be compensated due to DayZ limitations.</li>
+
+          <li>Players with CF Tools access may not use those tools on this server.</li>
+
+          <li>No combat logging. Your character will remain on the server for 5 minutes if you combat log.</li>
+        </ul>
+
+
+        <h4>Basebuilding</h4>
+        <ul>
+          <li>You must be in a group and place a flagpole. Solo groups are allowed.</li>
+
+          <li>One flag per group.</li>
+
+          <li>One custom base per player within a group.</li>
+
+          <li>No building in No-Build Zones. These are typically military and POI areas, and the server will prevent placement.</li>
+
+          <li>Cover all windows to prevent glitch theft.</li>
+
+          <li>No compensation will be given for open bases, including uncovered windows.</li>
+        </ul>
+
+
+        <h4>Bunkers</h4>
+        <ul>
+          <li>Keycard bunkers close after 1 minute.</li>
+
+          <li>Explosive bunkers reset on server restart.</li>
+
+          <li>
+            The Imperial Base exit is located at the far end,
+            upstairs in the hangar.
+          </li>
+
+          <li>
+            Use the catwalk computer to teleport out of the
+            Imperial Base.
+          </li>
+        </ul>
+
+
+        <h4>Loot Cycling</h4>
+
+        <p>
+          Loot cycling is not allowed. Unwanted loot must be
+          properly disposed of.
+        </p>
+
+        <ul>
+          <li>Place unwanted items on a dead zombie.</li>
+          <li>Or destroy the unwanted items by shooting them.</li>
+        </ul>
+
+
+        <h4>Vehicles</h4>
+        <ul>
+          <li>Garages can be purchased at the Trader.</li>
+
+          <li>
+            Vehicles impound after 20 hours. Impounded vehicles
+            return to the last garage they were stored in.
+          </li>
+
+          <li>
+            Vehicles without a last garage despawn after 24 hours.
+          </li>
+
+          <li>
+            Vehicles ruined from being submerged automatically
+            return to their last garage.
+          </li>
+
+          <li>
+            Insurance can be purchased while viewing the vehicle
+            in the garage. After purchasing insurance, the vehicle
+            can be repaired.
+          </li>
+
+          <li>Vehicles can be flipped with a wrench.</li>
+
+          <li>
+            Stuck vehicles can be pushed or rammed with another
+            vehicle to get them unstuck.
+          </li>
+
+          <li>
+            Do not travel outside the map boundary. Vehicles,
+            loot, and other items do not save outside the map
+            boundary and may despawn.
+          </li>
+
+          <li>
+            Compensation for items lost outside the map boundary
+            requires a clip showing what was lost and how.
+          </li>
+
+          <li>
+            If you end up under the map, fly to the landing pad
+            marked on the map. Put your ship in the garage,
+            relog, and retrieve the ship from a garage on the
+            surface.
+          </li>
+
+          <li>
+            Open a ticket for vehicle-related issues not covered
+            here. Compensation requires a clip showing what was
+            lost and how.
+          </li>
+
+          <li>
+            Do not open tickets for missing vehicles caused by
+            timer miscalculation.
+          </li>
+
+          <li>
+            Do not take other players' vehicles or items.
+          </li>
+
+          <li>
+            No compensation will be given for vehicles or items
+            left unlocked.
+          </li>
+        </ul>
+
+        <div class="rule-note">
+          <b>Server Crash Exception</b>
+          <p>
+            If the server crashes, open a ticket and staff will
+            help locate your speeder or ship.
+          </p>
+        </div>
+
+
+        <h4>Factions</h4>
+        <ul>
+          <li>
+            Once you join a faction, you are locked into that
+            faction. You may request to leave, but you cannot
+            rejoin the faction you leave.
+          </li>
+
+          <li>
+            While holding a faction leadership role, if you are
+            inactive for 5 days without informing an admin, you
+            will be removed from that role and someone else will
+            take over.
+          </li>
+
+          <li>
+            Faction leadership will be reviewed and re-voted
+            every 2 months to ensure active leadership.
+          </li>
+
+          <li>
+            Factions are intended to build communities, form
+            alliances, and support one another. Harassment,
+            targeting, or driving players away from the server
+            will not be tolerated.
+          </li>
+        </ul>
+
+      </div>
+    `
+  },
+
+
+  pvp: {
+    title: "PVP Raid Server Rules",
+    html: `
+
+      <div class="server-rules">
+
+        <h4>Gameplay & Conduct</h4>
+        <ul>
+          <li>The server restarts every 4 hours.</li>
+
+          <li>A clip is required for compensation.</li>
+
+          <li>
+            Loot cycling is not allowed. Dispose of unwanted loot
+            by placing it on a dead zombie or destroying it.
+          </li>
+        </ul>
+
+        <div class="rule-note">
+          <b>Tickets</b>
+          <p>
+            Clearly state the issue when opening a ticket.
+            Verbal abuse may result in loss of ticket privileges.
+          </p>
+        </div>
+
+
+        <h4>Vehicles</h4>
+        <ul>
+          <li>Garages are available at the Trader.</li>
+
+          <li>
+            Vehicles return to their last garage through impound
+            after 20 hours of inactivity.
+          </li>
+
+          <li>
+            Vehicles without a last garage despawn after 24 hours.
+          </li>
+
+          <li>
+            Submerged or ruined vehicles return to their last
+            garage automatically.
+          </li>
+
+          <li>
+            Insurance is available and allows vehicle repair
+            after purchase.
+          </li>
+        </ul>
+
+
+        <h4>Raiding</h4>
+        <ul>
+          <li>Raiding is explosives and doors only.</li>
+
+          <li>
+            Bases and rooms must be raidable by door.
+            No glitch or exploit building.
+          </li>
+
+          <li>
+            Unraidable sections may be removed by admins
+            without warning.
+          </li>
+
+          <li>Door stacking is allowed.</li>
+
+          <li>
+            There must be a visible gap between stacked doors.
+          </li>
+
+          <li>
+            Raid alert systems are available at the Trader.
+            Discord alerts require a personal Discord.
+            Optional in-game alerts are also available.
+          </li>
+
+          <li>
+            Tents can be raided by cutting codelocks with a
+            Fusion Cutter. This applies to tent locks only.
+          </li>
+
+          <li>
+            Vanilla watchtowers are disabled due to exploits.
+          </li>
+
+          <li>
+            Use crafted raid ladders made with sheet metal
+            and a pipe.
+          </li>
+
+          <li>
+            No raiding by stacking objects, except for
+            raid ladders.
+          </li>
+        </ul>
+
+
+        <h4>Basebuilding</h4>
+        <ul>
+          <li>
+            You must create a group and place a flagpole.
+            Solo groups are allowed.
+          </li>
+
+          <li>
+            Groups with no members will despawn.
+          </li>
+
+          <li>
+            Cover all windows to prevent glitch theft.
+          </li>
+
+          <li>One flag per group.</li>
+
+          <li>
+            One custom base per player within a group.
+          </li>
+
+          <li>
+            No building in No-Build Zones, including military
+            areas, gas stations, and POIs. Placement is blocked
+            by the server.
+          </li>
+        </ul>
+
+      </div>
+    `
+  }
+
+};
+
+
+// =====================================================
+// RULE BUTTONS
+// =====================================================
+
+const rulesPanel =
+  document.getElementById("rules-panel");
+
+if (rulesPanel) {
+
+  document
+    .querySelectorAll("#rules .rule-server-card")
+    .forEach(btn => {
+
+      btn.addEventListener("click", () => {
+
+        const d =
+          rulesData[btn.dataset.rules];
+
+        if (!d) return;
+
+        document
+          .querySelectorAll("#rules .rule-server-card")
+          .forEach(b =>
+            b.classList.remove("active")
+          );
+
+        btn.classList.add("active");
+
+        document.getElementById(
+          "rules-title"
+        ).textContent = d.title;
+
+        document.getElementById(
+          "rules-content"
+        ).innerHTML = d.html;
+
+        rulesPanel.hidden = false;
+
+        rulesPanel.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest"
+        });
+
+      });
+
+    });
+
+
+  const rulesClose =
+    document.querySelector(
+      "#rules-panel .rules-close"
+    );
+
+  if (rulesClose) {
+
+    rulesClose.addEventListener("click", () => {
+
+      rulesPanel.hidden = true;
+
+      document
+        .querySelectorAll("#rules .rule-server-card")
+        .forEach(b =>
+          b.classList.remove("active")
+        );
+
+    });
+
+  }
+
+}

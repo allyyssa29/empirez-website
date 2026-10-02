@@ -363,14 +363,14 @@ nav a:hover {
 }
 
 .person.bum {
-  border-color: #278e91 !important;
-  background: linear-gradient(145deg,#0a1b1c,#090a0b) !important;
-  box-shadow: inset 0 0 28px rgba(54,198,202,.08);
+  border-color: #63c174 !important;
+  background: linear-gradient(145deg, #0a1b0e, #09110b) !important;
+  box-shadow: inset 0 0 28px rgba(99,193,116,.08);
 }
 
-.person.bum:before {
-  background: #36c6ca !important;
-  box-shadow: 0 0 14px #36c6ca !important;
+.person.bum::before {
+  background: #63c174 !important;
+  box-shadow: 0 0 14px #63c174 !important;
 }
 
 .person:hover {

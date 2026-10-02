@@ -1300,3 +1300,287 @@ footer strong {
   width: 820px !important;
   height: 820px !important;
 }
+/* =====================================================
+   RULES SECTION
+===================================================== */
+
+.rules-general {
+  margin-top: 30px;
+  padding: 30px;
+  background: rgba(10, 12, 16, 0.88);
+  border: 1px solid #3b1115;
+  border-radius: 6px;
+  box-shadow: 0 0 24px rgba(224, 25, 36, 0.08);
+}
+
+.rules-general h3,
+.warning-system h3 {
+  margin: 0 0 22px;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+
+/* GENERAL RULE LIST */
+
+.general-rules-list {
+  margin: 0;
+  padding-left: 28px;
+}
+
+.general-rules-list li {
+  padding: 10px 0 10px 8px;
+  line-height: 1.65;
+  color: #b9bec8;
+}
+
+.general-rules-list li::marker {
+  color: #e01924;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+}
+
+.general-rules-list b {
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   WARNING SYSTEM
+===================================================== */
+
+.warning-system {
+  margin-top: 28px;
+  padding: 28px 30px;
+  background: rgba(224, 25, 36, 0.035);
+  border: 1px solid #5a1419;
+  border-radius: 6px;
+}
+
+.warning-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.warning-row:last-child {
+  border-bottom: none;
+}
+
+.warning-row > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #7a171e;
+  border-radius: 4px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #e01924;
+  background: rgba(224, 25, 36, 0.06);
+}
+
+.warning-row b {
+  display: block;
+  margin-bottom: 3px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.warning-row p {
+  margin: 0;
+  color: #aeb4bf;
+}
+
+
+/* =====================================================
+   PVE / PVP RULE BUTTONS
+===================================================== */
+
+.rules-server-select {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+#rules .rule-server-card {
+  position: relative;
+  min-height: 90px;
+  padding: 20px;
+  cursor: pointer;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(224, 25, 36, 0.07),
+      rgba(7, 9, 13, 0.96)
+    );
+
+  border: 1px solid #4d1418;
+  border-radius: 5px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+#rules .rule-server-card:hover {
+  transform: translateY(-2px);
+  border-color: #e01924;
+  box-shadow:
+    0 0 20px rgba(224, 25, 36, 0.18),
+    inset 0 0 20px rgba(224, 25, 36, 0.03);
+}
+
+#rules .rule-server-card.active {
+  border-color: #e01924;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(224, 25, 36, 0.16),
+      rgba(7, 9, 13, 0.98)
+    );
+
+  box-shadow:
+    0 0 24px rgba(224, 25, 36, 0.22),
+    inset 0 0 20px rgba(224, 25, 36, 0.05);
+}
+
+
+/* =====================================================
+   OPEN SERVER RULES PANEL
+===================================================== */
+
+#rules-panel {
+  margin-top: 22px;
+}
+
+#rules-title {
+  padding-right: 45px;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+
+/* RULE CATEGORY HEADINGS */
+
+.server-rules h4 {
+  margin: 34px 0 14px;
+  padding-bottom: 9px;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border-bottom: 1px solid #5a1419;
+}
+
+.server-rules h4:first-child {
+  margin-top: 5px;
+}
+
+
+/* RULE TEXT */
+
+.server-rules ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.server-rules li {
+  margin-bottom: 11px;
+  padding-left: 5px;
+  line-height: 1.6;
+  color: #b9bec8;
+}
+
+.server-rules li::marker {
+  color: #e01924;
+}
+
+.server-rules p {
+  line-height: 1.65;
+  color: #b9bec8;
+}
+
+
+/* IMPORTANT RULE NOTES */
+
+.rule-note {
+  margin: 22px 0;
+  padding: 18px 20px;
+
+  background: rgba(224, 25, 36, 0.055);
+  border-left: 3px solid #e01924;
+  border-top: 1px solid rgba(224, 25, 36, 0.18);
+  border-right: 1px solid rgba(224, 25, 36, 0.18);
+  border-bottom: 1px solid rgba(224, 25, 36, 0.18);
+}
+
+.rule-note b {
+  display: block;
+  margin-bottom: 7px;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.rule-note p {
+  margin: 0;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .rules-general {
+    padding: 22px 18px;
+  }
+
+  .warning-system {
+    padding: 22px 18px;
+  }
+
+  .rules-server-select {
+    grid-template-columns: 1fr;
+  }
+
+  #rules .rule-server-card {
+    min-height: 75px;
+  }
+
+  .general-rules-list {
+    padding-left: 22px;
+  }
+
+}

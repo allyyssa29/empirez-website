@@ -55,9 +55,10 @@ body:before {
   align-items: center;
   justify-content: space-between;
   padding: 0 5vw;
-  background: rgba(5,6,7,.92);
+  background: rgba(22, 6, 8, .96);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid #25272a;
+  border-bottom: 1px solid #5a1419;
+  box-shadow: 0 4px 25px rgba(224, 25, 36, .12);
 }
 
 .brand {
